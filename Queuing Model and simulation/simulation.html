@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simulation</title>
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-image: linear-gradient(
+          rgba(255, 255, 255, 0.5),
+          rgba(255, 255, 255, 0.5)
+        ),
+        url("./ben-r-aJf_F2Kl5kQ-unsplash.jpg");
+      background-color: #cccccc;
+      margin: 20px 20px;
+      padding: 10px 0;
+      text-align: center;
+      font-weight: bold;
+      font-size: 22px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    div {
+      margin-bottom: 10px;
+    }
+
+    label {
+      display: inline-block;
+      width: 100px;
+    }
+
+    input[type="text"] {
+      margin: auto;
+      width: 200px;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    button {
+      margin: 20px 10px;
+      border: 2px solid #000;
+      background: transparent;
+      font-weight: bold;
+      color: #fff;
+      font-size: 18px;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      padding: 8px 16px;
+      background-color: #4c4b4b;
+      color: white;
+      border-radius: 4px;
+    }
+
+    button:hover {
+      background-color: #4c4b4b;
+    }
+
+    #util {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    table {
+      width: 500px;
+      border-collapse: collapse;
+      margin-top: 20px;
+      margin: 0 auto;
+    }
+
+    th,
+    td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #4c4b4b;
+      color: white;
+    }
+
+    .t-body-2 tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+  </style>
+  <body>
+    <h1>Simulation</h1>
+
+    <div>
+      <button id="mm1s">MM1</button>
+      <button id="mm2s">MM2</button>
+      <button id="mg1s">MG1</button>
+      <button id="mg2s">MG2</button>
+      <button id="gg1s">GG1</button>
+      <button id="gg2s">GG2</button>
+    </div>
+
+    <div>
+      <label for="lambdas">Lambda :</label>
+      <input type="text" id="lambdas" />
+    </div>
+
+    <div>
+      <label for="mews">Mu :</label>
+      <input type="text" id="mews" />
+    </div>
+
+    <div>
+      <label for="mins">Min :</label>
+      <input type="text" id="mins" />
+    </div>
+
+    <div>
+      <label for="maxs">Max :</label>
+      <input type="text" id="maxs" />
+    </div>
+
+    <div>
+      <label for="mean-1s">Mean 1 :</label>
+      <input type="text" id="mean-1s" />
+    </div>
+
+    <div>
+      <label for="mean-2s">Mean 2 :</label>
+      <input type="text" id="mean-2s" />
+    </div>
+
+    <div>
+      <label for="variance-1s">Variance 1 :</label>
+      <input type="text" id="variance-1s" />
+    </div>
+
+    <div>
+      <label for="variance-2s">Variance 2 :</label>
+      <input type="text" id="variance-2s" />
+    </div>
+
+    <div>
+      <label for="random-no">Number of Events:</label>
+      <input type="text" id="random-no" />
+    </div>
+
+    <button id="calculates">Calculate</button>
+
+    <div id="util">Server Utilization:</div>
+
+    <table id="table-1">
+      <thead>
+        <tr>
+          <th>Arrival Time</th>
+          <th>Start Time</th>
+          <th>End Time</th>
+          <th>Service Time</th>
+          <th>T.A Time</th>
+          <th>Wait Time</th>
+          <th>Response Time</th>
+        </tr>
+      </thead>
+      <tbody class="t-body-1"></tbody>
+    </table>
+
+    <table id="table-2">
+      <thead>
+        <tr>
+          <th>Arrival Time</th>
+          <th>Start Time</th>
+          <th>End Time</th>
+          <th>Server</th>
+          <th>Service Time</th>
+          <th>T.A Time</th>
+          <th>Wait Time</th>
+          <th>Response Time</th>
+        </tr>
+      </thead>
+      <tbody class="t-body-2"></tbody>
+    </table>
+
+    <script src="simulation.js"></script>
+  </body>
+</html>
